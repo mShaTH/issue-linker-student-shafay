@@ -1,0 +1,82 @@
+[
+  {
+    "issue_id": "ZOOKEEPER-693",
+    "summary": "TestObserver stuck in tight notification loop in FLE"
+  },
+  {
+    "issue_id": "ZOOKEEPER-464",
+    "summary": "Need procedure to garbage collect ledgers"
+  },
+  {
+    "issue_id": "ZOOKEEPER-452",
+    "summary": "zookeeper performance graph should have percentage of reads rather than percentage of writes -  zkperfRW-3.2.jpg"
+  },
+  {
+    "issue_id": "ZOOKEEPER-417",
+    "summary": "stray message problem when changing servers"
+  },
+  {
+    "issue_id": "ZOOKEEPER-3240",
+    "summary": "Close socket on Learner shutdown to avoid dangling socket"
+  },
+  {
+    "issue_id": "ZOOKEEPER-3157",
+    "summary": "Improve FuzzySnapshotRelatedTest to avoid flaky due to issues like connection loss"
+  },
+  {
+    "issue_id": "ZOOKEEPER-3154",
+    "summary": "Update release process to use the MarkDown solution"
+  },
+  {
+    "issue_id": "ZOOKEEPER-3122",
+    "summary": "Verify build after maven migration and the end artifact"
+  },
+  {
+    "issue_id": "ZOOKEEPER-3067",
+    "summary": "Optionally suppress client environment logging."
+  },
+  {
+    "issue_id": "ZOOKEEPER-2992",
+    "summary": "The eclipse build target fails due to protocol redirection: http->https"
+  },
+  {
+    "issue_id": "ZOOKEEPER-2952",
+    "summary": "Upgrade third party libraries to address vulnerabilities"
+  },
+  {
+    "issue_id": "ZOOKEEPER-2775",
+    "summary": "ZK Client not able to connect with Xid out of order error "
+  },
+  {
+    "issue_id": "ZOOKEEPER-2074",
+    "summary": "Incorrect exit codes for \"./zkCli.sh cmd arg\""
+  },
+  {
+    "issue_id": "ZOOKEEPER-1929",
+    "summary": "std::length_error on update children"
+  },
+  {
+    "issue_id": "ZOOKEEPER-1753",
+    "summary": "ClientCnxn is not properly releasing the resources, which are used to ping RwServer"
+  },
+  {
+    "issue_id": "ZOOKEEPER-1613",
+    "summary": "The documentation still points to 2008 in the copyright notice"
+  },
+  {
+    "issue_id": "ZOOKEEPER-1307",
+    "summary": "zkCli.sh is exiting when an Invalid ACL exception is thrown from setACL command through client"
+  },
+  {
+    "issue_id": "ZOOKEEPER-1089",
+    "summary": "zkServer.sh status does not work due to invalid option of nc"
+  },
+  {
+    "issue_id": "ZOOKEEPER-10",
+    "summary": "Bad error message"
+  },
+  {
+    "issue_id": "ZOOKEEPER-1",
+    "summary": "Initial ZooKeeper code contribution from Yahoo!"
+  }
+]

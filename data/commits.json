@@ -1,0 +1,242 @@
+[
+  {
+    "hash": "9ab32ca0dfe9ba49a26c08560d39d444fd775e4a",
+    "message": "ZOOKEEPER-1307. zkCli.sh is exiting when an Invalid ACL exception is thrown from setACL command through client (Kavita Sharma via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1301840 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "99c9bbb0ab1eef469e1662086532c58078b9909a",
+    "message": "ZOOKEEPER-2992: The eclipse build target fails due to protocol redirection: http->https\n\nZOOKEEPER-2992 is the Jira issue.\n\nAuthor: Shawn Heisey <elyograg@apache.org>\n\nReviewers: Edward Ribeiro <edward.ribeiro@gmail.com>, Andor Molnár <andor@cloudera.com>, Michael Han <hanm@apache.org>\n\nCloses #479 from elyograg/master"
+  },
+  {
+    "hash": "96eefafce7ed036d3ab4a7a6d43792ce433bbfad",
+    "message": "ZOOKEEPER-3240: Close socket on Learner shutdown to avoid dangling so…\n\n…cket\n\nAuthor: Brian Nixon <nixon@fb.com>\n\nReviewers: hanm@apache.org, eolivelli@apache.org, andor@apache.org\n\nCloses #996 from enixon/learner-close-socket and squashes the following commits:\n\n57f5e891 [Brian Nixon] delete ReconfigFailureCasesTest::testLeaderTimesoutOnNewQuorum as it relies on the fixed buggy behavior\n1598b3ad [Brian Nixon] remove extraneous check on socket status\n381889da [Brian Nixon] ZOOKEEPER-3240: Close socket on Learner shutdown to avoid dangling socket"
+  },
+  {
+    "hash": "96c435f4a05312a357a2692650cc6eb858896af0",
+    "message": "ZOOKEEPER-3122: add root dir inside tarballs\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #893 from nkalmar/ZK-3122"
+  },
+  {
+    "hash": "91cf67029f398ae4c99ae40231cc2bde0f7559f0",
+    "message": "ZOOKEEPER-3122: Only deploy zk-server and zk-jute to maven repo\n\nSkip Maven deploy plugin for modules which are not to be deployed:\n- assembly\n- clients (C binding)\n- documentation\n- recipes\n\nAuthor: Enrico Olivelli <eolivelli@apache.org>\n\nReviewers: andor@apache.org\n\nCloses #889 from eolivelli/fix/ZOOKEEPER-3122-fix-deploy\n\n(cherry picked from commit 57296927ec268930a6c2704104849d4d7dcb6721)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "915c6acaea3f5c01d26f0bff93d1897a4da3e32c",
+    "message": "ZOOKEEPER-3122: add missing pom to source tarball\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #900 from nkalmar/master"
+  },
+  {
+    "hash": "892c491e49f8f2333308f10a6fb4367772625b07",
+    "message": "ZOOKEEPER-693. TestObserver stuck in tight notification loop in FLE\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@921509 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "7ef0923241475768cb6e1129a208bdfe1f16b968",
+    "message": "ZOOKEEPER-3122: fix some maven release related issues\n\nSome problems found in maven release procedure on branch-3.5 also applicable to master (missing license file, dependency scope)\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #886 from nkalmar/master"
+  },
+  {
+    "hash": "7b9176cbbe5878d7471b2ef02e1748d9229adb59",
+    "message": "ZOOKEEPER-2992: The eclipse build target fails due to protocol redirection: http->https\n\nZOOKEEPER-2992 is the Jira issue.\n\nAuthor: Shawn Heisey <elyograg@apache.org>\n\nReviewers: Edward Ribeiro <edward.ribeiro@gmail.com>, Andor Molnár <andor@cloudera.com>, Michael Han <hanm@apache.org>\n\nCloses #479 from elyograg/master"
+  },
+  {
+    "hash": "77d8c751f2cbb2d7039ec042bf4075072cd5179e",
+    "message": "ZOOKEEPER-3122: Rename zookeeper-server to zookeeper\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #892 from nkalmar/ZK-3122.3.5"
+  },
+  {
+    "hash": "755a722934c7bbb9f317ff440eef30dafcdc99ef",
+    "message": "ZOOKEEPER-3122: add missing pom to source tarball\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #900 from nkalmar/master\n\n(cherry picked from commit 915c6acaea3f5c01d26f0bff93d1897a4da3e32c)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "7335efc6662d85a774f49a0732cd922cfc843333",
+    "message": "ZOOKEEPER-3122: Rename zookeeper-server to zookeeper\n\nTo stay backward compatible and make dependency management less confusing, everyone using ZooKeeper can stay on \"zookeeper\" as artifactid.\nWhen java client is separated from server code, we can think on the module names to make sense.\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #890 from nkalmar/ZK-3122"
+  },
+  {
+    "hash": "6edc5a35b403072d14b898229fff098fad479f3e",
+    "message": "ZOOKEEPER-2074 Incorrect exit codes for \"./zkCli.sh cmd arg\" (surendra singh lilhore via michim)\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1658307 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "6dc04519a9dd0aee05dc4b896e1268eac85c002b",
+    "message": "ZOOKEEPER-3122: add missing pom to source tarball\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #900 from nkalmar/master\n\n(cherry picked from commit 915c6acaea3f5c01d26f0bff93d1897a4da3e32c)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "6d8b0cbe57e1b5dd4a88af68ac7def68d48defc0",
+    "message": "ZOOKEEPER-2074 Incorrect exit codes for \"./zkCli.sh cmd arg\" (surendra singh lilhore via michim)\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.5@1658308 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "6386376b9bc5ff0d3e92f49cba3010a0f39f1226",
+    "message": "ZOOKEEPER-1613. The documentation still points to 2008 in the copyright notice (Edward Ribeiro via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.4@1438367 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "59bd3ba59813992429802e7033f16ceb56f1d0c5",
+    "message": "ZOOKEEPER-2074: Incorrect exit codes for './zkCli.sh cmd arg' (Abraham Fine via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.5@1755787 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "57296927ec268930a6c2704104849d4d7dcb6721",
+    "message": "ZOOKEEPER-3122: Only deploy zk-server and zk-jute to maven repo\n\nSkip Maven deploy plugin for modules which are not to be deployed:\n- assembly\n- clients (C binding)\n- documentation\n- recipes\n\nAuthor: Enrico Olivelli <eolivelli@apache.org>\n\nReviewers: andor@apache.org\n\nCloses #889 from eolivelli/fix/ZOOKEEPER-3122-fix-deploy"
+  },
+  {
+    "hash": "41db89e31aca2fa4818a033b3f1105460614f6e8",
+    "message": "Revert \"ZOOKEEPER-3240: Close socket on Learner shutdown to avoid dangling so…\"\n\nThis reverts commit 015f9d662f2638b5ba66f07ac963de9f11d80bfd."
+  },
+  {
+    "hash": "38592a9e79e8c5f8ba8d6a709c7c28e7084030fc",
+    "message": "ZOOKEEPER-464. Need procedure to garbage collect ledgers\n  (erwin via fpj)\n\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@944003 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "3788d763da42e02b38eec540ad40bb07d0b414bb",
+    "message": "ZOOKEEPER-3122: Bugfix - Change maven java target versions to 1.6\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #802 from nkalmar/ZK-3122-3.4"
+  },
+  {
+    "hash": "31e29d599764b59d14ba7a076e11a612040968c3",
+    "message": "ZOOKEEPER-1089. zkServer.sh status does not work due to invalid option of nc (Roman Shaposhnik via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.3@1225106 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "2e4d2445e60b4970b916a49cb4d5dee089f6d247",
+    "message": "ZOOKEEPER-3122: Only deploy zk-server and zk-jute to maven repo\n\nSkip Maven deploy plugin for modules which are not to be deployed:\n- assembly\n- clients (C binding)\n- documentation\n- recipes\n\nAuthor: Enrico Olivelli <eolivelli@apache.org>\n\nReviewers: andor@apache.org\n\nCloses #889 from eolivelli/fix/ZOOKEEPER-3122-fix-deploy\n\nConflicts:\n        zookeeper-docs/pom.xml"
+  },
+  {
+    "hash": "2b2f87978789bbec0643d3b4994276270ac823ef",
+    "message": "ZOOKEEPER-2952: Upgrade third party libs: netty, slf4j\n\nhttps://issues.apache.org/jira/browse/ZOOKEEPER-2952\n\nAuthor: Andor Molnar <andor@cloudera.com>\n\nReviewers: phunt@apache.org\n\nCloses #429 from anmolnar/ZOOKEEPER-2952 and squashes the following commits:\n\nb488bf4b [Andor Molnar] ZOOKEEPER-2952. Updated slf4j license\n949ada4a [Andor Molnar] ZOOKEEPER-2952. Upgrade third party libs: netty, slf4j\n\nChange-Id: I7cce9cdbefab6c560a582c4dae7b4e00c73b1529\n(cherry picked from commit aa8b60670875e509dc22f338aebcc023c166d880)\nSigned-off-by: Patrick Hunt <phunt@apache.org>"
+  },
+  {
+    "hash": "2904795c587aadc1c0d3d16aa98c7a14c8f6e89d",
+    "message": "Revert ZOOKEEPER-2074.\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.5@1666761 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "1e92b62aa57596a3b915146d76cb023ce4715018",
+    "message": "ZOOKEEPER-3122: add root dir inside tarballs\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #893 from nkalmar/ZK-3122\n\n(cherry picked from commit 96c435f4a05312a357a2692650cc6eb858896af0)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "1e8286faed13e8d8abb2d5205f99440853e4b47d",
+    "message": "ZOOKEEPER-3122: fix files included in tarballs\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #897 from nkalmar/ZK-3122"
+  },
+  {
+    "hash": "03954ba7db28b67fb8a7f4ca4ce1d12798207c09",
+    "message": "A unit test for the fis for ZooKeeperServer loadData() method to optimally scan for the most recent valid snapshot.\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@670919 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "02af24921e1a1b95fc45cdb6ec54291fd3bc7a8d",
+    "message": "Preparing for 3.1.0 development\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@706861 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01cd40b9a03b832007176a087958ec3325998020",
+    "message": "ZOOKEEPER-1367. Data inconsistencies and unexpired ephemeral nodes after cluster restart. (Benjamin Reed via mahadev)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.3@1238178 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01c66227ce67d90a85f964f05d2f3e86878b8ebf",
+    "message": "ZOOKEEPER-1493. C Client: zookeeper_process doesn't invoke completion callback if zookeeper_close has been called (Michi Mutsuzaki via phunt and mahadev)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.3@1366786 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01b6b5e43d421985c1f8aa64a9b14be9f8770ec1",
+    "message": "Add the historical documentation."
+  },
+  {
+    "hash": "01aee31cd6dc5d49cc931299121cfc6687c2f9a5",
+    "message": "ZOOKEEPER-358. Throw exception when ledger does not exist\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@781173 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01aea04fe49e0e218e06a898780758c1bb0f2600",
+    "message": "ZOOKEEPER-2366: Reconfiguration of client port causes a socket leak. (fpj via cnauroth)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1750025 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "019e841e7703835aaa146dd1c16fd1b43d017071",
+    "message": "ZOOKEEPER-2822: Wrong `ObjectName` about `MBeanServer` in JMX module\n\nThe wrong `ObjectName` about `MBeanServer` in JMX module, should `log4j:hierarchy=default` rather than `log4j:hiearchy=default`.\n\nAuthor: asdf2014 <benedictjin2016@gmail.com>\n\nReviewers: andor@apache.org\n\nCloses #294 from asdf2014/ZOOKEEPER-2822 and squashes the following commits:\n\n294cf53ab [asdf2014] Using `System.getProperty` instead of `System.getenv` & doc this change\ned756a9b8 [asdf2014] Add `zookeeper.jmx.log4j.mbean`\n82da83a71 [asdf2014] ZOOKEEPER-2822: Wrong `ObjectName` about `MBeanServer` in JMX module\n\n(cherry picked from commit 91c6cb253c98a5c792314b1c7998ab5b939dddad)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "0196b6ff961665d4061cb14d6403d5aebddfff6f",
+    "message": "ZOOKEEPER-741. root level create on REST proxy fails\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/branches/branch-3.3@936619 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "017eca317e768782fedc78fede76f450c3ffeb22",
+    "message": "ZOOKEEPER-447. zkServer.sh doesn't allow different config files to be specified on the command line\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/branches/branch-3.2@800983 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "017ca1a24c1fa5988dd3c718f90b4beedb8a6a45",
+    "message": "ZOOKEEPER-2742: Few test cases of org.apache.zookeeper.ZooKeeperTest\n\n Few test cases of org.apache.zookeeper.ZooKeeperTest fails in Windows\n\nAuthor: Abhishek Kumar <abhishek.kr@huawei.com>\n\nReviewers: Mohammad Arshad <arshad@apache.org>\n\nCloses #237 from abhi-kr/ZOOKEEPER-2742"
+  },
+  {
+    "hash": "0172a4f326575999c08957659464083811faee35",
+    "message": "ZOOKEEPER-2281: ZK Server startup fails if there are spaces in the JAVA_HOME path (Neha Bathra via cnauroth)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.4@1718985 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "016f8c2ab755536ccc5daf953108978e9e0e9513",
+    "message": "reverting ZOOKEEPER-408 patch since it breaks the build\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@781266 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "015f9d662f2638b5ba66f07ac963de9f11d80bfd",
+    "message": "ZOOKEEPER-3240: Close socket on Learner shutdown to avoid dangling so…\n\n…cket\n\nAuthor: Brian Nixon <nixon@fb.com>\n\nReviewers: hanm@apache.org, andor@apache.org\n\nCloses #767 from enixon/learner-close-socket\n\n(cherry picked from commit de7b87cd69dfd38787270c71f00576f9a235e582)\nSigned-off-by: Andor Molnar <andor@apache.org>"
+  },
+  {
+    "hash": "015f6708c95cbd9c956012a73a7874d799deccb9",
+    "message": "Revert ZOOKEEPER-2074.\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1666760 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01182bebab3372fb0946a2529c65a5c74ad4ba7e",
+    "message": "ZOOKEEPER-1929: std::length_error on update children\n(Charles Strahan via rgs)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.4@1715564 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "01132edbd4df3df4472a2f8d3077fe585035cce1",
+    "message": "ZOOKEEPER-3067: Optionally disable client environment logging.\n\nAlthough logging the client environment at initialization can be\nhelpful for filing bug reports, it tends not to be that helpful\nfor internal applications. It also introduces a dependency on UID\nlookups (via getlogin) that application otherwise may not desire.\n\nAuthor: James Peach <jpeach@apache.org>\n\nReviewers: breed@apache.org, andor@apache.org\n\nCloses #565 from jpeach/ZOOKEEPER-3067"
+  },
+  {
+    "hash": "00f754ec3e64778ba9319fdc69af15ebf17fc117",
+    "message": "ZOOKEEPER-1613. The documentation still points to 2008 in the copyright notice (Edward Ribeiro via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1438366 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "00dbf70c8855007ce732e072761708fd61d844f1",
+    "message": "ZOOKEEPER-2952: Upgrade third party libs: netty, slf4j, log4j\n\nThis is the branch-3.4 version of\n\nhttps://github.com/apache/zookeeper/pull/429\n\nnetty, log4j, slf4j\n\nAuthor: Andor Molnar <andor@cloudera.com>\n\nReviewers: phunt@apache.org\n\nCloses #435 from anmolnar/ZOOKEEPER-2952-branch34\n\nChange-Id: Ie75a4be6143d67c9a17c77f945dca4838d8c2430"
+  },
+  {
+    "hash": "00db0cc55328d8748ea20b4e9d8e9ec3455265ed",
+    "message": "ZOOKEEPER-3122: MAVEN MIGRATION - 3.4 - - pom versions fix\n\nAuthor: Norbert Kalmar <nkalmar@yahoo.com>\n\nReviewers: andor@apache.org\n\nCloses #772 from nkalmar/ZK-3122-3.4 and squashes the following commits:\n\nefbbb26ec [Norbert Kalmar] ZOOKEEPER-3122 - remove contrib build from default build profile\n51e6d47c0 [Norbert Kalmar] ZOOKEEPER-3122 -add toaster to local repo in contrib\ndf3b7668f [Norbert Kalmar] ZOOKEEPER-3122 - pom versions fix"
+  },
+  {
+    "hash": "00d9708df5eb531225cbf82707da08f7cfe9d334",
+    "message": "ZOOKEEPER-1307. zkCli.sh is exiting when an Invalid ACL exception is thrown from setACL command through client (Kavita Sharma via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/branches/branch-3.4@1301842 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "00c4c11853460923bdc9f3e4618382391d7b713c",
+    "message": "ZOOKEEPER-3157: Improve FuzzySnapshotRelatedTest to avoid flaky due to issues like connection loss\n\nQuick fix to make the test more reliable.\n\nAuthor: Andor Molnar <andor@apache.org>\n\nReviewers: fangmin@apache.org, eolivelli@gmail.com, andor@apache.org\n\nCloses #657 from anmolnar/ZOOKEEPER-3157"
+  },
+  {
+    "hash": "00a6861f922b55cbfeec3eb928be2b57ddf99780",
+    "message": "ZOOKEEPER-1089. zkServer.sh status does not work due to invalid option of nc (Roman Shaposhnik via phunt)\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1225108 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "0082d79ac81bfcb1c3d0c8139d74002020402940",
+    "message": "ZOOKEEPER-452. zookeeper performance graph should have percentage of reads rather than percentage of writes - zkperfRW-3.2.jpg (mahadev)\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@789531 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "0081c0764f422fd6665806355401c847f4daa04a",
+    "message": "Moving as part of ZooKeeper TLP changes\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/tags/release-3.1.0@1038826 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "005b3fb8ddb3ef03183fd0539a40ceb86fe8f4ac",
+    "message": "ZOOKEEPER-2992: The eclipse build target fails due to protocol redirection: http->https\n\nZOOKEEPER-2992 is the Jira issue.\n\nAuthor: Shawn Heisey <elyograg@apache.org>\n\nReviewers: Edward Ribeiro <edward.ribeiro@gmail.com>, Andor Molnár <andor@cloudera.com>, Michael Han <hanm@apache.org>\n\nCloses #479 from elyograg/master"
+  },
+  {
+    "hash": "0057dcb78313be28ae16b7e84c873191471dceee",
+    "message": "ZOOKEEPER-417. stray message problem when changing servers (breed via mahadev)\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@788860 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "0051cd26087492fe393932d9fdac1f7bff8b7ac4",
+    "message": "ZOOKEEPER-693: hudson failure in ZKDatabaseCorruptionTest (mahadev via henryr)\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@920605 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "0026e27e81f4889816bec162964e2a721cc53db9",
+    "message": "ZOOKEEPER-2775: ZK Client not able to connect with Xid out of order error\n\nOnce client enters into Xid out of order issue, It never comes to normal state. It keeps trying to connect and  fail with the same error.  Recreating/Restarting is the only solution as of now. This happens because of bug in the ZK client code. This MR provides the fix.\n\nAuthor: Mohammad Arshad <arshad@apache.org>\n\nReviewers: Michael Han <hanm@apache.org>, Rakesh Radhakrishnan <rakeshr@apache.org>, Abe Fine <afine@apache.org>\n\nCloses #254 from arshadmohammad/ZOOKEEPER-2775-XidOutOfOrder\n\n(cherry picked from commit fa1dc109d4c1bb7913fee43170ed6131e3dc1b1f)\nSigned-off-by: Michael Han <hanm@apache.org>"
+  },
+  {
+    "hash": "001cdf3b5d180c58561940b6fa1b251928181f12",
+    "message": "ZOOKEEPER-464. Need procedure to garbage collect ledgers\n(erwin via fpj)\n\nOBS: Adding missing files.\n\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/hadoop/zookeeper/trunk@944140 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "0014376a18ba46df973b06e85bcf6694b0fa91d4",
+    "message": "ZooKeeper 3.5.1-rc1 release.\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/tags/release-3.5.1-rc1@1679684 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "000b7dfa2fd3339af95870b95c1e12acc8313cf6",
+    "message": "ZOOKEEPER-1753. ClientCnxn is not properly releasing the resources, which are used to ping RwServer (Rakesh R via fpj)\n\n\n\ngit-svn-id: https://svn.apache.org/repos/asf/zookeeper/trunk@1524398 13f79535-47bb-0310-9956-ffa450edef68"
+  },
+  {
+    "hash": "000317fb50daae81bc0b34fef5d2895b6aa851bd",
+    "message": "ZOOKEEPER-3154: Update release process to use the MarkDown solution\n\nAdded `mvn clean` and `mvn install` to `ant clean` and `ant compile` as dependency.\nThis way we clean and build zookeeper-docs maven sub-project when we clean and build main ant project.\nAdded releasenotes.md and fixed small issues in MarkDown files.\n\nNext step is to remove not needed forrest content and dead ant code.\nOnly valid for branch-3.5, do not backport to branch-3.4.\n\nChange-Id: I308a970c253be1bb82387516bf7b08bd7818a2c7\n\nAuthor: Tamas Penzes <tamaas@cloudera.com>\n\nReviewers: andor@apache.org\n\nCloses #663 from tamaashu/ZOOKEEPER-3154-3.5 and squashes the following commits:\n\nfce1499b [Tamas Penzes] ZOOKEEPER-3154: Removed HTML document generation which will be put back when maven migration will be done\n06cba415 [Tamas Penzes] ZOOKEEPER-3154: Update release process to use the MarkDown solution"
+  }
+]
