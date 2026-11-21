@@ -14,6 +14,22 @@ class LinkIssuesTests(unittest.TestCase):
             [{"issue_id": "ZOOKEEPER-12", "commits": ["abc123"]}],
         )
 
+    def test_two_references(self):
+        issues = [{"issue_id": "ZOOKEEPER-12", "summary": "Example issue"}]
+        commits = [{"hash": "aaa", "message": "ZOOKEEPER-12: fix issue"},{"hash": "bbb", "message": "follow up for ZOOKEEPER-12"}]
+        self.assertEqual(
+            build_links(issues, commits),
+            [{"issue_id": "ZOOKEEPER-12", "commits": ["aaa", "bbb"]}],
+        )
+        
+    def test_no_matches(self):
+        issues = [{"issue_id": "ZOOKEEPER-12", "summary": "Example issue"}]
+        commits = [{"hash": "aaa", "message": "not exists"}]
+        self.assertEqual(
+            build_links(issues, commits),
+            [{"issue_id": "ZOOKEEPER-12", "commits": []},],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
