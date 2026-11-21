@@ -81,7 +81,8 @@ class LinkIssuesTests(unittest.TestCase):
             [{"issue_id": "ZOOKEEPER-12", "commits": ["aaa"]}],
         )
         
-    
+    # def test_one_commit_many_issues(self):
+    #     issues = [{"issue_id": "ZOOKEEPER-12", "summary": "Example issue"},{"i
 
 if __name__ == "__main__":
     unittest.main()

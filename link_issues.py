@@ -11,20 +11,20 @@ def build_links(issues: list[dict], commits: list[dict]) -> list[dict]:
     """Return [{"issue_id": str, "commits": [str, ...]}, ...]; see README.md."""
     result = []
     for issue in issues:
-        curr_id = issue["issue_id"]
-        c = r"(?<![A-Za-z0-9_-])"
-        c2 = r"(?![A-Za-z0-9_-])"
-        esc = re.escape(curr_id)
-        p =  c + esc + c2
-        p = re.compile(p)
+        current_id = issue["issue_id"]
+        start_check = r"(?<![A-Za-z0-9_-])"
+        end_check = r"(?![A-Za-z0-9_-])"
+        esc_id = re.escape(current_id)
+        all_checks =  start_check + esc_id + end_check
+        final_id = re.compile(all_checks)
         same_hashes = []
         for commit in commits:
-            mes = commit["message"]
-            hash = commit["hash"]
-            if p.search(mes):
-                same_hashes.append(hash)
+            current_message = commit["message"]
+            current_hash = commit["hash"]
+            if final_id.search(current_message):
+                same_hashes.append(current_hash)
         same_hashes.sort()
-        result.append({"issue_id":curr_id, "commits":same_hashes})
+        result.append({"issue_id": current_id, "commits": same_hashes})
     result.sort(key=lambda x: x["issue_id"])
     return result
 

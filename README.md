@@ -91,3 +91,5 @@ changes (if any), and external sources used.
 - Assumptions: An ID matches if its seperate from other letters, numbers, and _ or -. Each commit comes only once if repeated, and IDs not found in the issues file are ignored.
 - Test Command: Unchanged.
 - Sources: Used python docs to study regex.
+- Time: Started at 12:58 pm. Ending time: 2:35-2:40 pm.
+- Unfinished Work: Couldnt write test cases for every check. Hopefully code works though :).
