@@ -13,8 +13,9 @@ def build_links(issues: list[dict], commits: list[dict]) -> list[dict]:
     for issue in issues:
         curr_id = issue["issue_id"]
         c = r"(?<![A-Za-z0-9_-])"
+        c2 = r"(?![A-Za-z0-9_-])"
         esc = re.escape(curr_id)
-        p =  c + esc
+        p =  c + esc + c2
         p = re.compile(p)
         same_hashes = []
         for commit in commits:
