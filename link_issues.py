@@ -4,12 +4,26 @@
 import argparse
 import json
 import sys
+import re
 
 
 def build_links(issues: list[dict], commits: list[dict]) -> list[dict]:
     """Return [{"issue_id": str, "commits": [str, ...]}, ...]; see README.md."""
-    # TODO: implement the matching and output rules.
-    raise NotImplementedError("Implement build_links")
+    result = []
+    for issue in issues:
+        curr_id = issue["issue_id"]
+        c = r"(?<![A-Za-z0-9_-])"
+        esc = re.escape(curr_id)
+        p =  c + esc
+        p = re.compile(p)
+        same_hashes = []
+        for commit in commits:
+            mes = commit["message"]
+            hash = commit["hash"]
+            if p.search(mes):
+                same_hashes.append(hash)
+        result.append({"issue_id":curr_id, "commits":same_hashes})
+    return result
 
 
 def main() -> None:
