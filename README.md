@@ -88,6 +88,6 @@ Additional assessor tests check only the behaviour stated above.
 **Your notes (at most five bullets):** assumptions, unfinished work, test command
 changes (if any), and external sources used.
 
-- Assumptions: An ID matches if its seperate from other letters, numbers, and _ or -. Each commit comes only once, and IDs not found in the issues file are ignored.
+- Assumptions: An ID matches if its seperate from other letters, numbers, and _ or -. Each commit comes only once if repeated, and IDs not found in the issues file are ignored.
 - Test Command: Unchanged.
 - Sources: Used python docs to study regex.

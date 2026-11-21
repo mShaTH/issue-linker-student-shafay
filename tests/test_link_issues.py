@@ -46,13 +46,42 @@ class LinkIssuesTests(unittest.TestCase):
             {"hash": "kkk", "message": "ZOOKEEPER-12-extra"},
             {"hash": "lll", "message": "_ZOOKEEPER-12"},
             {"hash": "mmm", "message": "ZOOKEEPER-12a"},
-            {"hash": "nnn", "message": "fix/ZOOKEEPER-12-fix-issue"},
+            {"hash": "nnn", "message": "fix/ZOOKEEPER-12-fix-issue"}
         ]
         self.assertEqual(
             build_links(issues, commits),
             [{"issue_id": "ZOOKEEPER-12", "commits": ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]}],
         )
-
+        
+    def test_sorting(self):
+        issues = [{"issue_id": "ZOOKEEPER-2", "summary": "Example issue"},{"issue_id": "ZOOKEEPER-10", "summary": "Another issue"},{"issue_id": "ZOOKEEPER-1", "summary": "Third issue"}]
+        commits = [
+            {"hash": "ccc", "message": "ZOOKEEPER-2"},
+            {"hash": "aaa", "message": "ZOOKEEPER-2"},
+            {"hash": "bbb", "message": "ZOOKEEPER-2"}
+        ]
+        self.assertEqual(
+            build_links(issues, commits),
+            [{"issue_id": "ZOOKEEPER-1", "commits": []},{"issue_id": "ZOOKEEPER-10", "commits": []},{"issue_id":"ZOOKEEPER-2", "commits": ["aaa", "bbb", "ccc"]}],
+        )
+        
+    def test_unknown_ids(self):
+        issues = [{"issue_id": "ZOOKEEPER-12", "summary": "Example issue"}]
+        commits = [{"hash": "aaa", "message": "ZOOKEEPER-12 and ZOOKEEPER-99"},{"hash": "bbb", "message": "Only ZOOKEEPER-99"}]
+        self.assertEqual(
+            build_links(issues, commits),
+            [{"issue_id": "ZOOKEEPER-12", "commits": ["aaa"]}],
+        )
+        
+    def test_come_only_once(self):
+        issues = [{"issue_id": "ZOOKEEPER-12", "summary": "Example issue"}]
+        commits = [{"hash": "aaa", "message": "ZOOKEEPER-12: fix\n\nCloses ZOOKEEPER-12 (ZOOKEEPER-12)"}]
+        self.assertEqual(
+            build_links(issues, commits),
+            [{"issue_id": "ZOOKEEPER-12", "commits": ["aaa"]}],
+        )
+        
+    
 
 if __name__ == "__main__":
     unittest.main()

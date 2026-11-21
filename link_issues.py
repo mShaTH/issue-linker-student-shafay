@@ -23,7 +23,9 @@ def build_links(issues: list[dict], commits: list[dict]) -> list[dict]:
             hash = commit["hash"]
             if p.search(mes):
                 same_hashes.append(hash)
+        same_hashes.sort()
         result.append({"issue_id":curr_id, "commits":same_hashes})
+    result.sort(key=lambda x: x["issue_id"])
     return result
 
 
